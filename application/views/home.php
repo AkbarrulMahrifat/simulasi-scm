@@ -21,7 +21,7 @@
 <div class="bg-halAwal">
     <div class="letak-tengah"><img src="assets/img/logo.png" class="logo-hal-awal"></div>
     <div class="letak-tengah">
-        <button class="btn btn-danger btn-lg btn-mulai" type="button"></button>
+        <button class="btn btn-danger btn-lg btn-mulai" type="button">AAAAA </button>
     </div>
     <div class="letak-tengah">
         <button class="btn btn-warning btn-lg btn-petunjuk" type="button">Petunjuk </button>
