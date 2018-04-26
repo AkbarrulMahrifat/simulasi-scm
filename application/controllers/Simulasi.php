@@ -33,14 +33,68 @@ class Simulasi extends CI_Controller {
 
     function peternakan($id){
         $where = array('id_hasil' => $id);
-        $data['hasil'] = $this->M_simulasi->hasil($where, 'hasil')->row()->id_hasil;
+        $data['hasil'] = $this->M_simulasi->hasil($where, 'hasil')->result();
         $data['sapi'] = $this->M_simulasi->sapi()->result();
         $data['makanan'] = $this->M_simulasi->makanan()->result();
         $this->load->view('peternakan', $data);
     }
 
-    function pabrik(){
-        $this->load->view('pabrik');
+    function proseshitung($id){
+        $id_hasil = $this->input->post('id_hasil');
+        $id_sapi = $this->input->post('id_sapi');
+        $id_makanan = $this->input->post('id_makanan');
+        $bulan_laktasi = $this->input->post('bulan_laktasi');
+        $jumlah_makanan = $this->input->post('jumlah_makanan');
+        if ($id_sapi == 1 ){
+            $hasil = '475';
+        }
+        elseif ($id_sapi == 3 ){
+            $hasil = '347';
+        }
+        else {
+            $hasil = '314';
+        }
+        $data = array(
+            'id_sapi' => $id_sapi,
+            'id_makanan' => $id_makanan,
+            'bulan_laktasi' => $bulan_laktasi,
+            'jumlah_makanan' => $jumlah_makanan,
+            'hasil' => $hasil
+        );
+        $where = array(
+            'id_hasil' => $id_hasil
+        );
+        $this->M_simulasi->proseshitung($where, $data, 'hasil');
+        redirect('Simulasi/peternakan/'.$id);
+    }
+
+    function pabrik($id){
+        $where = array('id_hasil' => $id);
+        $data['hasil'] = $this->M_simulasi->hasil($where, 'hasil')->result();
+        $this->load->view('pabrik', $data);
+    }
+
+    function prosespabrik($id){
+        $id_hasil = $this->input->post('id_hasil');
+        $id_sapi = $this->input->post('id_sapi');
+        $id_makanan = $this->input->post('id_makanan');
+        $bulan_laktasi = $this->input->post('bulan_laktasi');
+        $jumlah_makanan = $this->input->post('jumlah_makanan');
+        $hasil = $this->input->post('hasil');
+        $susu_jadi= $hasil/2;
+        $data = array(
+            'id_sapi' => $id_sapi,
+            'id_makanan' => $id_makanan,
+            'bulan_laktasi' => $bulan_laktasi,
+            'jumlah_makanan' => $jumlah_makanan,
+            'hasil' => $hasil,
+            'susu_jadi' => $susu_jadi
+        );
+        $where = array(
+            'id_hasil' => $id_hasil
+        );
+        $this->M_simulasi->prosespabrik($where, $data, 'hasil');
+        redirect('Simulasi/pabrik/'.$id);
     }
 
     function distribusi(){

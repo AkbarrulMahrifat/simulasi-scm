@@ -22,6 +22,15 @@ class M_simulasi extends CI_Model{
 
     function mulai($data, $table){
         $this->db->insert($table, $data);
+    }
 
+    function proseshitung($where,$data,$table){
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    }
+
+    function prosespabrik($where,$data,$table){
+        $this->db->where($where);
+        $this->db->update($table,$data);
     }
 }
