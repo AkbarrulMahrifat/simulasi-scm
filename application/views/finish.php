@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>simulasi scm</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/styles.css">
 </head>
 
 <body class="bg-halAkhir">
@@ -39,12 +39,12 @@
         </div>
     </div>
     <div class="mainlagi">
-        <button class="btn btn-warning btn-mainlagi" type="button">Menu Awal</button>
-        <button class="btn btn-danger btn-mainlagi" type="button">Mulai Simulasi Lagi</button>
+        <a class="btn btn-warning btn-mainlagi" type="button" href="<?=site_url('Simulasi/index')?>">Menu Awal</a>
+        <a class="btn btn-danger btn-mainlagi" type="button" href="<?=site_url('Simulasi/peternakan')?>">Mulai Simulasi Lagi</a>
     </div>
 </div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>assets/js/jquery.min.js"></script>
+<script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

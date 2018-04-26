@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>simulasi scm</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/styles.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
         </div>
         <div class="row permintaan2">
             <div class="col-lg-6 col-md-6">
-                <button class="btn btn-danger btn-selanjutnya" type="button">Selanjutnya </button>
+                <a class="btn btn-danger btn-selanjutnya" type="button" href="<?=site_url('Simulasi/finish')?>">Selanjutnya </a>
             </div>
             <div class="col-lg-2 col-md-2">
                 <button class="btn btn-warning kirim1" type="button">Kirim </button>
@@ -48,8 +48,8 @@
         </div>
     </div>
 </div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>assets/js/jquery.min.js"></script>
+<script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

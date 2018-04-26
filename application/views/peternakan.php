@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>simulasi scm</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/styles.css">
 </head>
 
 <body>
@@ -26,42 +26,42 @@
         <button class="btn btn-danger btn-lg btn-proses" type="button">Mulai Proses </button>
     </div>
     <div class="letak-kanan">
-        <button class="btn btn-primary btn-lg btn-back" type="button">Menu Awal</button>
+        <a class="btn btn-primary btn-lg btn-back" type="button" href="<?=site_url('Simulasi/index')?>">Menu Awal</a>
     </div>
     <div class="letak-kanan">
-        <button class="btn btn-success btn-lg btn-selanjutnya" type="button">Selanjutnya </button>
+        <a class="btn btn-success btn-lg btn-selanjutnya" type="button" href="<?=site_url('Simulasi/pabrik')?>">Selanjutnya </a>
     </div>
     <div class="container-fluid">
         <div class="row pilihan">
             <div class="col-lg-3 col-md-3">
-                <select class="input-lg pilihan">
+                <select class="input-lg pilihan" name="id_sapi">
                     <optgroup label="Pilih Jenis Sapi">
-                        <option value="12" selected="">Friesien Holstein (FH)</option>
-                        <option value="13">Jersey</option>
-                        <option value="14">Guenersey</option>
+                        <?php foreach ($sapi as $s) { ?>
+                        <option value="<?php echo $s->id_sapi ?>"><?php echo $s->jenis_sapi ?></option>
+                        <?php } ?>
                     </optgroup>
                 </select>
             </div>
             <div class="col-lg-3 col-md-3">
-                <input class="input-lg masukkan" type="text" placeholder="masukkan bulan laktasi">
+                <input class="input-lg masukkan" type="text" placeholder="masukkan bulan laktasi" name="bulan_laktasi">
             </div>
             <div class="col-lg-3 col-md-3">
-                <select class="input-lg pilihan">
+                <select class="input-lg pilihan" name="id_makanan">
                     <optgroup label="Pilih Jenis Makanan Sapi">
-                        <option value="12" selected="">Rumput Hijau</option>
-                        <option value="13">Rumput Gajah</option>
-                        <option value="14">Gabah Padi</option>
+                        <?php foreach ($makanan as $m) { ?>
+                            <option value="<?php echo $m->id_makanan ?>"><?php echo $m->jenis_makanan ?></option>
+                        <?php } ?>
                     </optgroup>
                 </select>
             </div>
             <div class="col-lg-3 col-md-3">
-                <input class="input-lg masukkan" type="text" placeholder="masukkan jumlah makanan">
+                <input class="input-lg masukkan" type="text" placeholder="masukkan jumlah makanan" name="jumlah_makanan">
             </div>
         </div>
     </div>
 </div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>assets/js/jquery.min.js"></script>
+<script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
