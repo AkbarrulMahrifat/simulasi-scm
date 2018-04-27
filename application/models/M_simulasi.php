@@ -16,8 +16,14 @@ class M_simulasi extends CI_Model{
         return $this->db->get('jenis_makanan');
     }
 
-    function hasil($where, $table){
-        return $this->db->get_where($table, $where);
+    function hasil($where){
+        $this->db->select('*');
+        $this->db->from('hasil');
+        $this->db->join('jenis_sapi', 'jenis_sapi.id_sapi = hasil.id_sapi', 'inner');
+        $this->db->join('jenis_makanan', 'jenis_makanan.id_makanan = hasil.id_makanan', 'inner');
+        $this->db->where($where);
+        $data = $this->db->get();
+        return $data->result();
     }
 
     function mulai($data, $table){

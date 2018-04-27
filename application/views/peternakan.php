@@ -38,7 +38,7 @@
             <div class="col-lg-3 col-md-3">
                 <input type="hidden" name="id_hasil" value="<?php echo $h->id_hasil ?>">
                 <select class="input-lg pilihan" name="id_sapi">
-                        <option value="<?php echo $h->id_sapi ?>"><?php echo $h->id_sapi ?></option>
+                        <option value="<?php echo $h->id_sapi ?>"><?php echo $h->jenis_sapi ?></option>
                     <optgroup label="Pilih Jenis Sapi">
                         <?php foreach ($sapi as $s) { ?>
                         <option value="<?php echo $s->id_sapi ?>"><?php echo $s->jenis_sapi ?></option>
@@ -51,7 +51,7 @@
             </div>
             <div class="col-lg-3 col-md-3">
                 <select class="input-lg pilihan" name="id_makanan">
-                    <option value="<?php echo $h->id_makanan ?>"><?php echo $h->id_makanan ?></option>
+                    <option value="<?php echo $h->id_makanan ?>"><?php echo $h->jenis_makanan ?></option>
                     <optgroup label="Pilih Jenis Makanan Sapi">
                         <?php foreach ($makanan as $m) { ?>
                             <option value="<?php echo $m->id_makanan ?>"><?php echo $m->jenis_makanan ?></option>
