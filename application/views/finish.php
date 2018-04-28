@@ -41,7 +41,7 @@
     </div>
     <form method="post" action="<?php echo base_url().'index.php/Simulasi/mulai';?>">
     <div class="mainlagi">
-        <a class="btn btn-warning btn-mainlagi" type="button" href="<?=site_url('index.php/Simulasi /index')?>">Menu Awal</a>
+        <a class="btn btn-warning btn-mainlagi" type="button" href="<?=site_url('Simulasi/index')?>">Menu Awal</a>
         <button class="btn btn-danger btn-mainlagi" type="submit">Mulai Simulasi Lagi</button>
     </div>
     </form>
