@@ -34,7 +34,7 @@ class Simulasi extends CI_Controller {
     function peternakan($id){
         $where = array('id_hasil' => $id);
         $data['hasil'] = $this->M_simulasi->tampil($where, 'hasil')->result();
-//        $data['hasil'] = $this->M_simulasi->hasil($where)->result();
+//        $data['hasil'] = $this->M_simulasi->hasil($where)->row();
         $data['sapi'] = $this->M_simulasi->sapi()->result();
         $data['makanan'] = $this->M_simulasi->makanan()->result();
         $this->load->view('peternakan', $data);
@@ -161,5 +161,17 @@ class Simulasi extends CI_Controller {
         $data['hasil'] = $this->M_simulasi->tampil($where, 'hasil')->result();
 //        $data['hasil'] = $this->M_simulasi->hasil($where);
         $this->load->view('finish', $data);
+    }
+
+    function petunjuk1(){
+        $this->load->view('petunjuk1');
+    }
+
+    function petunjuk2(){
+        $this->load->view('petunjuk2');
+    }
+
+    function petunjuk3(){
+        $this->load->view('petunjuk3');
     }
 }

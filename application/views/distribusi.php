@@ -12,9 +12,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simulasi scm</title>
+    <title>SIMPS (Simulasi Produksi Susu)</title>
     <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/styles.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/fonts/material-icons.css">
 </head>
 
 <body>
@@ -28,38 +30,53 @@
         <input type="hidden" name="jumlah_makanan" value="<?php echo $h->jumlah_makanan ?>">
         <input type="hidden" name="hasil" value="<?php echo $h->hasil ?>">
         <input type="hidden" name="pendapatan" value="<?php echo $h->pendapatan ?>">
+        <input class="input-lg jumlah-susu" style="text-align:center" name="susu_jadi" value="<?php echo $h->susu_jadi ?>" readonly>
     <div class="container-fluid">
-        <div class="row permintaan">
-            <div class="col-lg-6 col-md-6" style="text-align: center; padding-right: 400px">
-                <label>Hasil Produksi Susu Jadi</label>
-                <br>
-                <input class="input-lg" style="text-align:center; width: 100px" name="susu_jadi" value="<?php echo $h->susu_jadi ?>" readonly>
-            </div>
-            <br>
-            <div class="col-lg-2 col-md-2">
-                <input type="text" placeholder="test" class="jumlah-permintaan1" name="toko1" value="<?php echo $h->toko1 ?>">
-            </div>
-            <div class="col-lg-2 col-md-2">
-                <input type="text" placeholder="test" class="jumlah-permintaan" name="toko2" value="<?php echo $h->toko2 ?>">
-            </div>
-            <div class="col-lg-2 col-md-2">
-                <input type="text" placeholder="test" class="jumlah-permintaan3" name="toko3" value="<?php echo $h->toko3 ?>">
+        <button class="btn btn-info button-back" type="button" onclick="window.location.href='<?=site_url('Simulasi/finish/'.$h->id_hasil)?>'"><i class="material-icons next">chevron_right</i></button>
+        <div class="dropdown pilihan">
+            <button class="btn btn-default active btn-lg dropdown-toggle pilihan" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fa fa-navicon icon-pilihan"></i> </button>
+            <ul class="dropdown-menu dropdown-menu-left pilihan" role="menu">
+                <li role="presentation"><a href="#"><i class="fa fa-home symbol-pilihan"></i>Menu Awal</a></li>
+                <li role="presentation"><a href="#"><i class="material-icons symbol-pilihan">videogame_asset</i>Cara Main</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container order">
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" placeholder="test" class="input-sm p-1" name="toko1" value="<?php echo $h->toko1 ?>">
             </div>
         </div>
-        <div class="row permintaan2">
-            <div class="col-lg-6 col-md-6">
-                <a class="btn btn-danger btn-selanjutnya" type="button" href="<?=site_url('Simulasi/finish/'.$h->id_hasil)?>">Selanjutnya </a>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-danger btn-kirim" type="submit">Kirim </button>
             </div>
-            <div class="col-lg-2 col-md-2">
-                <button class="btn btn-warning kirim1" type="submit">Kirim </button>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" placeholder="test" class="input-sm p-2" name="toko2" value="<?php echo $h->toko2 ?>">
             </div>
-
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-danger btn-kirim2" type="submit">Kirim </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" placeholder="test" class="input-sm p-3" name="toko3" value="<?php echo $h->toko3 ?>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-danger btn-kirim3" type="submit">Kirim </button>
             </div>
         </div>
     </div>
     </form>
     <?php } ?>
 </div>
+
 <script src="<?=base_url()?>assets/js/jquery.min.js"></script>
 <script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

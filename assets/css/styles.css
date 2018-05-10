@@ -92,7 +92,37 @@ img.logo{
 }
 
 .bg-peternakan{
-  background:url("../../assets/img/dasar peternakan.jpg");
+  background:url("../../assets/img/peternakan.png");
+  height:100vh;
+  background-repeat:no-repeat;
+  background-size:cover;
+  margin-bottom:0px;
+  padding-bottom:0px;
+  font-family:comic sans ms;
+}
+
+.bg-petunjuk1{
+  background:url("../../assets/img/petunjuk1.png");
+  height:100vh;
+  background-repeat:no-repeat;
+  background-size:cover;
+  margin-bottom:0px;
+  padding-bottom:0px;
+  font-family:comic sans ms;
+}
+
+.bg-petunjuk2{
+  background:url("../../assets/img/petunjuk2.png");
+  height:100vh;
+  background-repeat:no-repeat;
+  background-size:cover;
+  margin-bottom:0px;
+  padding-bottom:0px;
+  font-family:comic sans ms;
+}
+
+.bg-petunjuk3{
+  background:url("../../assets/img/petunjuk3.png");
   height:100vh;
   background-repeat:no-repeat;
   background-size:cover;
@@ -102,7 +132,7 @@ img.logo{
 }
 
 .bg-distribusi{
-  background:url("../../assets/img/halaman distribusi.jpg");
+  background:url("../../assets/img/distribusi.png");
   height:100vh;
   background-repeat:no-repeat;
   background-size:cover;
@@ -112,18 +142,27 @@ img.logo{
 }
 
 .bg-halAwal{
-  background:url("../../assets/img/dasar.png");
+  background:url("../../assets/img/menu-awal.png");
   height:100vh;
   background-repeat:no-repeat;
   margin-bottom:0px;
   padding-bottom:0px;
   font-family:comic sans ms;
-  text-align:center;
+  resize:both;
+}
+
+.bg-skor{
+  background:url("../../assets/img/skor.png");
+  height:100vh;
+  background-repeat:no-repeat;
+  margin-bottom:0px;
+  padding-bottom:0px;
+  font-family:comic sans ms;
   resize:both;
 }
 
 .bg-pabrik{
-  background:url("../../assets/img/halaman pabrik.jpg");
+  background:url("../../assets/img/pabrik.png");
   height:100vh;
   background-repeat:no-repeat;
   background-size:cover;
@@ -224,9 +263,9 @@ h3.judul-halAwal.keterangan{
 }
 
 .letak-hasil{
-  text-align:center;
-  padding-top:17px;
-  margin-right:120px;
+  text-align:right;
+  padding-top:20px;
+  margin-right:80px;
 }
 
 .letak-kanan{
@@ -550,13 +589,11 @@ thead.judul-tabel-pesan{
 }
 
 .btn-proses{
-  width:250px;
-  margin-top:210px;
-  margin-bottom:20px;
-  padding-top:11px;
-  padding-bottom:11px;
-  border-radius:30px;
-  font-size:25px;
+  width:230px;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:22px;
+  margin-left:-30px;
 }
 
 .btn-proses2{
@@ -566,6 +603,7 @@ thead.judul-tabel-pesan{
   padding-bottom:11px;
   border-radius:30px;
   font-size:25px;
+  margin-left:-100px;
 }
 
 .btn-selanjutnya{
@@ -588,12 +626,16 @@ thead.judul-tabel-pesan{
 
 .btn-mulai{
   width:250px;
-  margin-top:40px;
+  margin-top:350px;
   margin-bottom:20px;
-  font-size:18px;
-  padding-top:8px;
-  padding-bottom:8px;
-  border-radius:30px;
+  font-size:20px;
+  padding-top:12px;
+  padding-bottom:12px;
+  border-radius:80px;
+  margin-left:830px;
+  background:rgb(240,106,100);
+  text-align:center;
+  border:none;
 }
 
 .btn-mainlagi{
@@ -615,9 +657,9 @@ thead.judul-tabel-pesan{
 }
 
 .input-lg.hasil{
-  height:47px;
+  height:50px;
   padding:10px 16px;
-  font-size:18px;
+  font-size:25px;
   line-height:1.3333333;
   border-radius:6px;
   width:150px;
@@ -625,14 +667,22 @@ thead.judul-tabel-pesan{
   border:none;
 }
 
-.pilihan{
+.jumlah-susu{
+  height:50px;
+  padding:10px 16px;
+  font-size:25px;
+  line-height:1.3333333;
+  border-radius:6px;
+  width:150px;
   background:transparent;
   border:none;
-  color:rgb(20,87,88);
+  margin-left:1130px;
+  position:absolute;
+  margin-top:20px;
 }
 
 div.row.pilihan{
-  margin-top:40px;
+  margin-top:520px;
   padding-left:30px;
 }
 
@@ -647,12 +697,28 @@ div.row.permintaan2{
 }
 
 .masukkan{
-  background:transparent;
-  border:none;
+  background-color:rgb(238,83,70);
+  border-radius:20px;
+  width:200px;
+  color:white;
+  border-style:none;
+}
+
+.masukkan1{
+  background-color:rgb(251,208,59);
+  border-radius:20px;
+  width:200px;
+  color:white;
+  border-style:none;
 }
 
 div.row.peternakan{
   padding-top:490px;
+  text-align:center;
+}
+
+div.row.pabrik{
+  padding-top:530px;
   text-align:center;
 }
 
@@ -669,7 +735,7 @@ div.row.peternakan{
   background:transparent;
   border:none;
   color:rgb(10,16,10);
-  width:45%;
+  width:55%;
   font-size:40px;
   margin-right:80px;
 }
@@ -677,13 +743,6 @@ div.row.peternakan{
 .bg-halAkhir{
   background:rgb(221,220,174);
   background-size:cover;
-}
-
-div.container.bd-rincian{
-  background:white;
-  padding-top:50px;
-  margin-top:60px;
-  padding-bottom:50px;
 }
 
 .kategori{
@@ -755,5 +814,222 @@ div.mainlagi{
 .kirim1{
   width:70%;
   margin-left:-69px;
+}
+
+.icon-pilihan{
+  color:white;
+}
+
+button.btn.btn-default.active.btn-lg.dropdown-toggle.pilihan{
+  background:transparent;
+  border:hidden;
+  font-size:45px;
+  border-style:none;
+  text-align:center;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+div.dropdown.pilihan{
+  padding-top:20px;
+  padding-left:30px;
+  position:absolute;
+}
+
+.dropdown-menu-left.pilihan{
+  margin-left:30px;
+  font-size:19px;
+  background:rgb(255,255,255);
+}
+
+.dropdown-menu > li > a{
+  display:block;
+  padding:7px 20px;
+  clear:both;
+  font-weight:600;
+  line-height:1.42857143;
+  color:#1b89a6;
+  white-space:nowrap;
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
+  color:#fafcfc;
+  text-decoration:none;
+  background:rgb(251,193,40);
+}
+
+.symbol-pilihan{
+  margin-right:20px;
+}
+
+select.input-lg.pilihan{
+  background-color:rgb(242,148,61);
+  color:white;
+  border-radius:20px;
+  width:200px;
+  border-style:none;
+}
+
+select.input-lg.pilihan1{
+  background-color:rgb(79,193,194);
+  color:white;
+  border-radius:20px;
+  width:200px;
+  border-style:none;
+}
+
+div.container-fluid.letak-pilihan{
+  margin-top:-20px;
+}
+
+.masukkan::webkit-input-placeholder{
+  color:white;
+}
+
+.button-next{
+  position:absolute;
+  margin-top:280px;
+  background:rgb(42,100,151);
+  color:white;
+  height:90px;
+  width:90px;
+  border-radius:80px;
+  text-align:center;
+  margin-left:40px;
+  border-width:3px;
+  border-color:white;
+}
+
+.button-back{
+  position:absolute;
+  margin-top:280px;
+  background:rgb(42,100,151);
+  color:white;
+  height:90px;
+  width:90px;
+  border-radius:80px;
+  text-align:center;
+  margin-left:40px;
+  border-width:3px;
+  border-color:white;
+}
+
+.button-back{
+  position:absolute;
+  margin-top:280px;
+  background:rgb(42,100,151);
+  color:white;
+  height:90px;
+  width:90px;
+  border-radius:80px;
+  text-align:center;
+  margin-left:1230px;
+  border-width:3px;
+  border-color:white;
+}
+
+i.material-icons.next{
+  font-size:50px;
+}
+
+input.input-sm.p-1{
+  height:35px;
+  width:70px;
+  margin-left:845px;
+  margin-top:67px;
+  font-size:20px;
+  color:rgb(102,68,32);
+}
+
+input.input-sm.p-2{
+  height:35px;
+  width:70px;
+  margin-left:120px;
+  margin-top:75px;
+  font-size:20px;
+  color:rgb(102,68,32);
+  position:absolute;
+}
+
+input.input-sm.p-3{
+  height:35px;
+  width:70px;
+  margin-left:828px;
+  margin-top:139px;
+  font-size:20px;
+  color:rgb(102,68,32);
+  position:absolute;
+}
+
+.btn-kirim{
+  border-radius:5px;
+  width:80px;
+  margin-left:842px;
+  margin-top:132px;
+}
+
+.btn-kirim2{
+  border-radius:5px;
+  width:80px;
+  margin-left:115px;
+  margin-top:237px;
+  position:absolute;
+}
+
+.btn-kirim3{
+  border-radius:5px;
+  width:80px;
+  margin-left:826px;
+  margin-top:305px;
+  position:absolute;
+}
+
+div.container-fluid.order{
+  position:absolute;
+}
+
+input.input-sm.skor-P{
+  background:transparent;
+  height:55px;
+  width:90px;
+  color:rgb(212,53,55);
+  font-size:30px;
+  border:none;
+  margin-left:580px;
+  margin-top:180px;
+}
+
+input.input-sm.skor-P2{
+  background:transparent;
+  height:55px;
+  width:90px;
+  color:rgb(255,255,255);
+  font-size:30px;
+  border:none;
+  margin-left:580px;
+  margin-top:75px;
+}
+
+.skor-btn{
+  height:53px;
+  width:400px;
+  font-size:20px;
+  margin-left:370px;
+  margin-top:43px;
+}
+
+.home{
+  color:white;
+  background:transparent;
+  height:80px;
+  width:85px;
+  font-size:45px;
+  text-align:center;
+  margin-top:10px;
+  margin-left:10px;
+  position:absolute;
+  border:none;
 }
 
