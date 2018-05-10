@@ -32,8 +32,9 @@ class Simulasi extends CI_Controller {
     }
 
     function peternakan($id){
-        $data['idhasil'] = $this->M_simulasi->ambilidhasil($id)->row()->id_hasil;
-        $data['hasil'] = $this->M_simulasi->hasil($id);
+        $where = array('id_hasil' => $id);
+        $data['hasil'] = $this->M_simulasi->tampil($where, 'hasil')->result();
+//        $data['hasil'] = $this->M_simulasi->hasil($where)->row();
         $data['sapi'] = $this->M_simulasi->sapi()->result();
         $data['makanan'] = $this->M_simulasi->makanan()->result();
         $this->load->view('peternakan', $data);
@@ -87,8 +88,9 @@ class Simulasi extends CI_Controller {
     }
 
     function pabrik($id){
-        $data['idhasil'] = $this->M_simulasi->ambilidhasil($id)->row()->id_hasil;
-        $data['hasil'] = $this->M_simulasi->hasil($id);
+        $where = array('id_hasil' => $id);
+        $data['hasil'] = $this->M_simulasi->tampil($where, 'hasil')->result();
+//        $data['hasil'] = $this->M_simulasi->hasil($where);
         $this->load->view('pabrik', $data);
     }
 
@@ -116,8 +118,9 @@ class Simulasi extends CI_Controller {
     }
 
     function distribusi($id){
-        $data['idhasil'] = $this->M_simulasi->ambilidhasil($id)->row()->id_hasil;
-        $data['hasil'] = $this->M_simulasi->hasil($id);
+        $where = array('id_hasil' => $id);
+        $data['hasil'] = $this->M_simulasi->tampil($where, 'hasil')->result();
+//        $data['hasil'] = $this->M_simulasi->hasil($where);
         $this->load->view('distribusi', $data);
     }
 
@@ -154,8 +157,9 @@ class Simulasi extends CI_Controller {
     }
 
     function finish($id){
-        $data['idhasil'] = $this->M_simulasi->ambilidhasil($id)->row()->id_hasil;
-        $data['hasil'] = $this->M_simulasi->hasil($id);
+        $where = array('id_hasil' => $id);
+        $data['hasil'] = $this->M_simulasi->tampil($where, 'hasil')->result();
+//        $data['hasil'] = $this->M_simulasi->hasil($where);
         $this->load->view('finish', $data);
     }
 

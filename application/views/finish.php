@@ -21,20 +21,21 @@
 
 <body>
 <div class="bg-skor">
+    <?php foreach ($hasil as $h) { ?>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <input class="input-sm skor-P" type="text" placeholder="test" value="<?php echo $hasil['hasil'] ?> liter" readonly>
+                <input class="input-sm skor-P" type="text" placeholder="test" value="<?php echo $h->hasil ?> liter" readonly>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <input class="input-sm skor-P2" type="text" placeholder="test" value="<?php echo $hasil['susu_jadi'] ?> kotak" readonly>
+                <input class="input-sm skor-P2" type="text" placeholder="test" value="<?php echo $h->susu_jadi ?> kotak" readonly>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <input class="input-sm skor-P3" type="text" placeholder="test" value="<?php echo "Rp. ".number_format($hasil['pendapatan'],2,',','.'); ?>" readonly>
+                <input class="input-sm skor-P2" type="text" placeholder="test" value="<?php echo "Rp. ".number_format($h->pendapatan,2,',','.'); ?>" readonly>
             </div>
         </div>
         <div class="row">
@@ -43,6 +44,7 @@
             </div>
         </div>
     </div>
+    <?php } ?>
 </div>
 
 <script src="<?=base_url()?>assets/js/jquery.min.js"></script>
